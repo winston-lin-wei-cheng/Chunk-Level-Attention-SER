@@ -13,18 +13,18 @@ This is an implementation of chunk-level speech emotion recognition (SER) framew
 
 # How to run
 After extracted the IS13ComParE LLDs (e.g., XXX_llds/feat_mat/\*.mat) for MSP-Podcast *[whatever version]* corpus, we use the *'labels_concensus.csv'* provided by the corpus as the default input label setting. 
-1. change data & label paths in norm_para.py, then run it 
-2. change data & label paths in lstm_training.py or cnn1D_training.py for LSTM or CNN-based model, the running args are,
-⋅⋅* -ep: number of epochs
-⋅⋅* -batch: batch size for training
-⋅⋅* -emo: emotion attributes (Act, Dom or Val)
-⋅⋅* -atten: type of chunk-level attneiton model (NonAtten, GatedVec, RnnAttenVec or SelfAttenVec)
-⋅⋅⋅ run in the terminal
+1. change data & label paths in **norm_para.py**, then run it 
+2. change data & label paths in **lstm_training.py** or **cnn1D_training.py** for LSTM or CNN-based model, the running args are,
+   * -ep: number of epochs
+   * -batch: batch size for training
+   * -emo: emotion attributes (Act, Dom or Val)
+   * -atten: type of chunk-level attneiton model (NonAtten, GatedVec, RnnAttenVec or SelfAttenVec)
+   * run in the terminal
 ```
 python lstm_training.py -ep 100 -batch 128 -emo Act -atten RnnAttenVec
 ```
-3. change data & label & model paths in lstm_testing.py or cnn1D_testing.py for the testing results based on the MSP-Podcast test set,
-⋅⋅⋅ run in the terminal
+3. change data & label & model paths in **lstm_testing.py** or **cnn1D_testing.py** for the testing results based on the MSP-Podcast test set,
+   * run in the terminal
 ```
 python lstm_testing.py -ep 100 -batch 128 -emo Act -atten RnnAttenVec
 ```
@@ -43,7 +43,7 @@ Users can get these results by running the lstm_testing.py and cnn1D_testing.py 
 
 
 # For general usage
-The implementation is for the MSP-Podcast corpus, however, the framework can be applied on general speech-based sequence-to-one tasks (e.g., speaker recognition, gender detection or SER). If you want to apply the framework on your own tasks, here are some important parameters need to be specified in the **DynamicChunkSplitTrainingData/DynamicChunkSplitTestingData** functions under the utils.py file,
+The implementation is for the MSP-Podcast corpus, however, the framework can be applied on general speech-based sequence-to-one tasks (e.g., speaker recognition, gender detection or SER). If you want to apply the framework on your own tasks, here are some important parameters need to be specified in the **DynamicChunkSplitTrainingData/DynamicChunkSplitTestingData** functions under the **utils.py** file,
 1. max duration in second of your corpus (i.e., Tmax)
 2. desired chunk window length in second (i.e., Wc)
 3. number of chunks splitted in a sentence (i.e., C = ceiling of Tmax/Wc)
@@ -57,10 +57,11 @@ If you use this code, please cite the following paper:
 
 Wei-Cheng Lin and Carlos Busso, "Chunk-Level Speech Emotion Recognition: A General Framework of Sequence-to-One Dynamic Temporal Modeling"
 
+```
 @InProceedings{xXx,
   title={XXX},
   author={XXX},
   booktitle={XXX},
   year={2020},
 } 
-
+```
