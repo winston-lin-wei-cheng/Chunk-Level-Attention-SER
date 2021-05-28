@@ -1,5 +1,5 @@
 # Chunk-Level Attention SER
-This is an implementation of chunk-level speech emotion recognition (SER) framework in the [paper]() for the MSP-Podcast corpus.
+This is an implementation of chunk-level speech emotion recognition (SER) framework in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9442335) for the MSP-Podcast corpus.
 
 # Suggested Environment and Requirements
 1. Python 3.6
@@ -30,7 +30,7 @@ python lstm_testing.py -ep 100 -batch 128 -emo Act -atten RnnAttenVec
 ```
 
 # Pre-trained models
-We provide some trained model weights based on **version 1.6** of the MSP-Podcast in the *'trained_model_v1.6'* folder. The CCC performances of models are the same as the [paper]().
+We provide some trained model weights based on **version 1.6** of the MSP-Podcast in the *'trained_model_v1.6'* folder. The CCC performances of models are the same as the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9442335).
 
 | Model            | Act              | Val              | Dom              | Online [ms/uttr] |
 |:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
@@ -63,8 +63,8 @@ Wei-Cheng Lin and Carlos Busso, "Chunk-Level Speech Emotion Recognition: A Gener
     title={Chunk-Level Speech Emotion Recognition: A General Framework of Sequence-to-One Dynamic Temporal Modeling},
     journal={IEEE Transactions on Affective Computing},
     number={},
-    volume={To Appear},
-  pages={},
+    volume={},
+  pages={1-1},
   year={2021},
   month={},
     doi={10.1109/TAFFC.2021.3083821},
