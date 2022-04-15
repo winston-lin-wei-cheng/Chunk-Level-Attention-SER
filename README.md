@@ -1,7 +1,7 @@
 # Chunk-Level Attention SER
 This is a Keras implementation of chunk-level speech emotion recognition (SER) framework in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9442335) for the MSP-Podcast corpus.
 
-<mark style="background-color: #FFFF00">If you are looking for PyTorch implementation, please go to this [repo](https://github.com/winston-lin-wei-cheng/Chunk-Level-Attention-SER-PyTorch)</mark>
+==:exclamation:NEW:exclamation: : If you are looking for PyTorch implementation, please go to this [repo](https://github.com/winston-lin-wei-cheng/Chunk-Level-Attention-SER-PyTorch)==
 
 ![The Chunk-Level Attention SER Framework](/images/framework.png)
 
