@@ -1,5 +1,9 @@
 # Chunk-Level Attention SER
-This is an implementation of chunk-level speech emotion recognition (SER) framework in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9442335) for the MSP-Podcast corpus.
+This is a Keras implementation of chunk-level speech emotion recognition (SER) framework in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9442335) for the MSP-Podcast corpus.
+
+<mark style="background-color: #FFFF00">If you are looking for PyTorch implementation, please go to this [repo](https://github.com/winston-lin-wei-cheng/Chunk-Level-Attention-SER-PyTorch)</mark>
+
+![The Chunk-Level Attention SER Framework](/images/framework.png)
 
 # Suggested Environment and Requirements
 1. Python 3.6
@@ -7,14 +11,16 @@ This is an implementation of chunk-level speech emotion recognition (SER) framew
 3. keras version 2.2.4
 4. tensorflow version 1.14.0
 5. CUDA 10.0
-6. The scipy, numpy and pandas packages
+6. The scipy, numpy and pandas...etc conventional packages
 7. The MSP-Podcast corpus (request to download from [UTD-MSP lab website](https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Podcast.html))
 8. The IS13ComParE LLDs (acoustic features) extracted by OpenSmile (users can refer to the [opensmile-LLDs-extraction](https://github.com/winston-lin-wei-cheng/opensmile-LLDs-extraction) repository) 
 
 # How to run
 After extracted the IS13ComParE LLDs (e.g., XXX_llds/feat_mat/\*.mat) for MSP-Podcast *[whatever version]* corpus, we use the *'labels_concensus.csv'* provided by the corpus as the default input label setting. 
-1. change data & label paths in **norm_para.py**, then run it 
-2. change data & label paths in **lstm_training.py** or **cnn1D_training.py** for LSTM or CNN-based model, the running args are,
+
+1. change data & label root paths in **norm_para.py**, then run it to get z-norm parameters (mean and std) based on the Train set. We also provide the parameters of the v1.6 corpus in the *'NormTerm'* folder.
+
+2. change data & label root paths in **lstm_training.py** or **cnn1D_training.py** for LSTM or CNN-based model, the running args are,
    * -ep: number of epochs
    * -batch: batch size for training
    * -emo: emotion attributes (Act, Dom or Val)
@@ -23,7 +29,8 @@ After extracted the IS13ComParE LLDs (e.g., XXX_llds/feat_mat/\*.mat) for MSP-Po
 ```
 python lstm_training.py -ep 100 -batch 128 -emo Act -atten RnnAttenVec
 ```
-3. change data & label & model paths in **lstm_testing.py** or **cnn1D_testing.py** for the testing results based on the MSP-Podcast test set,
+
+3. change data & label & model root paths in **lstm_testing.py** or **cnn1D_testing.py** for the testing results based on the MSP-Podcast test set,
    * run in the terminal
 ```
 python lstm_testing.py -ep 100 -batch 128 -emo Act -atten RnnAttenVec
@@ -43,7 +50,7 @@ Users can get these results by running the lstm_testing.py and cnn1D_testing.py 
 
 
 # For general usage
-The implementation is for the MSP-Podcast corpus, however, the framework can be applied on general speech-based sequence-to-one tasks (e.g., speaker recognition, gender detection or SER). If you want to apply the framework on your own tasks, here are some important parameters need to be specified in the **DynamicChunkSplitTrainingData/DynamicChunkSplitTestingData** functions under the **utils.py** file,
+The implementation is for the MSP-Podcast corpus, however, the framework can be applied on general speech-based sequence-to-one tasks (e.g., speaker recognition, gender detection, acoustic event classification or SER...etc). If you want to apply the framework on your own tasks, here are some important parameters need to be specified in the **DynamicChunkSplitTrainingData/DynamicChunkSplitTestingData** functions under the **utils.py** file,
 1. max duration in second of your corpus (i.e., Tmax)
 2. desired chunk window length in second (i.e., Wc)
 3. number of chunks splitted in a sentence (i.e., C = ceiling of Tmax/Wc)
@@ -63,10 +70,10 @@ Wei-Cheng Lin and Carlos Busso, "Chunk-Level Speech Emotion Recognition: A Gener
     title={Chunk-Level Speech Emotion Recognition: A General Framework of Sequence-to-One Dynamic Temporal Modeling},
     journal={IEEE Transactions on Affective Computing},
     number={},
-    volume={},
-  pages={1-1},
-  year={2021},
-  month={},
+    volume={To Appear},
+    pages={},
+    year={2021},
+    month={},
     doi={10.1109/TAFFC.2021.3083821},
 }
 ```
