@@ -3,6 +3,8 @@ This is a Keras implementation of chunk-level speech emotion recognition (SER) f
 
 :exclamation::exclamation::exclamation:**NEW: If you are looking for PyTorch implementation, please go to this [repo](https://github.com/winston-lin-wei-cheng/Chunk-Level-Attention-SER-PyTorch)**
 
+:exclamation::exclamation::exclamation:**NEW: If you are looking for applying dynamic-chunk-segmentation as general data preprocessing step, please go to this [repo](https://github.com/winston-lin-wei-cheng/Dynamic-Chunk-Segmentation)**
+
 ![The Chunk-Level Attention SER Framework](/images/framework.png)
 
 # Suggested Environment and Requirements
