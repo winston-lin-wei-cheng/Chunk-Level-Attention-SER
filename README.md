@@ -67,15 +67,15 @@ If you use this code, please cite the following paper:
 Wei-Cheng Lin and Carlos Busso, "Chunk-Level Speech Emotion Recognition: A General Framework of Sequence-to-One Dynamic Temporal Modeling"
 
 ```
-@article{Lin_202x,
-    author={W.-C. Lin and C. Busso},
-    title={Chunk-Level Speech Emotion Recognition: A General Framework of Sequence-to-One Dynamic Temporal Modeling},
-    journal={IEEE Transactions on Affective Computing},
-    number={},
-    volume={To Appear},
-    pages={},
-    year={2021},
-    month={},
-    doi={10.1109/TAFFC.2021.3083821},
+@article{Lin_2023_4,
+  	author={W.-C. Lin and C. Busso},
+  	title={Chunk-Level Speech Emotion Recognition: A General Framework of Sequence-to-One Dynamic Temporal Modeling},
+  	journal={IEEE Transactions on Affective Computing},
+  	number={2},
+  	volume={14},
+	  pages={1215-1227},
+	  year={2023},
+ 	  month={April-June},
+  	doi={10.1109/TAFFC.2021.3083821},
 }
 ```
