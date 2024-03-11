@@ -73,9 +73,9 @@ Wei-Cheng Lin and Carlos Busso, "Chunk-Level Speech Emotion Recognition: A Gener
   	journal={IEEE Transactions on Affective Computing},
   	number={2},
   	volume={14},
-	  pages={1215-1227},
-	  year={2023},
- 	  month={April-June},
+	pages={1215-1227},
+	year={2023},
+ 	month={April-June},
   	doi={10.1109/TAFFC.2021.3083821},
 }
 ```
